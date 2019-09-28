@@ -17,7 +17,8 @@ export default class SignInForm extends Component {
 
     fetch('http://localhost:3000/users')
       .then(res => res.json())
-      .then(data => {
+      .then(
+        data => {
         data.filter(userObj => {
           if(userObj.name === this.state.name) {
             fetch(`http://localhost:3000/users/${userObj.id}`)
@@ -25,7 +26,7 @@ export default class SignInForm extends Component {
             .then(data => this.props.logIn(data))
           }
         })
-      })
+       })
     }
 
   
