@@ -4,9 +4,8 @@ class Drawing extends Component {
 
   deleteButtonHandle = (event) => {
     fetch(`http://localhost:3000/drawings/${this.props.drawing.id}`,{
-      method: "DELETE"
-    }).then(res => res.json())
-      .then(this.props.deleteDrawing(this.props.drawing.id))
+      method: "DELETE",
+    }).then(this.props.deleteDrawing(this.props.drawing.id))
   }
 
   render() {
