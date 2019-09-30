@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Redirect } from 'react-router'
+import DrawingList from '../containers/DrawingsList.js'
 
 export default class User extends Component {
 
@@ -9,7 +10,7 @@ export default class User extends Component {
 
   renderRedirect = () => {
     if (this.state.redirect) {
-      return <Redirect to ='/bracket' />
+      return <Redirect to ='/whiteboard' />
     }    
   }
 
@@ -24,7 +25,9 @@ export default class User extends Component {
       <div>
         {this.renderRedirect()}
         <h1> {this.props.currentUser.name} </h1>
-        <button onClick={() => this.onNewGameClick()}>Start a new game should be button</button>
+        <button onClick={() => this.onNewGameClick()}>Start a new WhiteBoard</button>
+        <br></br><br></br>
+        My WhiteBoards: <DrawingList deleteDrawing={this.props.deleteDrawing} currentUser={this.props.currentUser}/>
       </div>
     )
   }

@@ -19,6 +19,7 @@ export default class SignInForm extends Component {
       .then(res => res.json())
       .then(
         data => {
+        // eslint-disable-next-line array-callback-return
         data.filter(userObj => {
           if(userObj.name === this.state.name) {
             fetch(`http://localhost:3000/users/${userObj.id}`)
