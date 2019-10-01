@@ -6,7 +6,8 @@ export default class LogOut extends Component {
   render() {
     if(this.props.currentUser.name) {
       return <div> 
-      Are You Sure You Want To 
+      {this.props.currentUser.name},
+       Are You Sure You Want To 
       <button onClick={this.props.logOut}>Log Out</button>
       ?
       </div>

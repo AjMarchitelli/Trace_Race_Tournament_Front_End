@@ -105,15 +105,7 @@ export default class WhiteBoard extends Component {
 
   render() {
     return (
-        <div>
-          <button onClick={this.saveImage}>Save Picture</button>
-          <canvas id="canvas"
-          onMouseDown={this.startPosition} 
-          onMouseUp={this.finishPosition} 
-          onMouseMove={this.draw} 
-
-          ref="canvas" 
-          />
+        <div >
           <button onClick={this.boldButtonHandle}>bold</button>
           <button name='black' onClick={this.colorHandle}>black</button>
           <button name='red' onClick={this.colorHandle}>red</button>
@@ -122,6 +114,15 @@ export default class WhiteBoard extends Component {
           <button name='yellow' onClick={this.colorHandle}>yellow</button>
           <button name='purple' onClick={this.colorHandle}>purple</button>
           <button onClick={this.eraseHandle}>eraser</button>
+          <button  className='save' onClick={this.saveImage}>Save Picture</button>
+
+          <canvas 
+          id="canvas"
+          onMouseDown={this.startPosition} 
+          onMouseUp={this.finishPosition} 
+          onMouseMove={this.draw} 
+          ref="canvas" 
+          />
 
         </div>
     )

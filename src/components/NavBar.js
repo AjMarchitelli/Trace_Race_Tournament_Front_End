@@ -4,10 +4,10 @@ import { NavLink as Link } from 'react-router-dom'
 const NavBar = (props) => {
   if(props.currentUser.name) {
     return (
-      <div>
-        <Link to='/'>Home</Link>
-        <Link to='/user'>User</Link>
-        <Link to='/logOut'>Log Out</Link>
+      <div className='navbar'>
+        <Link to='/'> Home </Link>
+        <Link to='/user'> User </Link>
+        <Link to='/logOut'> Log Out </Link>
       </div>
     )}  else {
     return (

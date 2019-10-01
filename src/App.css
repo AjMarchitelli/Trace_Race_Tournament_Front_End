@@ -34,3 +34,7 @@ body {
 li.whiteLi {
   background-color: white
 }
+
+.save {
+    float: right;
+}
