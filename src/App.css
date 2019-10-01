@@ -34,3 +34,22 @@ body {
 li.whiteLi {
   background-color: white
 }
+
+.selected {
+  background-color: grey;
+  color: white;
+}
+
+button:hover {
+  background-color: black;
+  color: white;
+}
+
+.save {
+  float: right
+}
+
+#bold {
+  text-align: center;
+  display: inline-block;
+}

@@ -69,8 +69,6 @@ export default class WhiteBoard extends Component {
       ctx.beginPath()
       ctx.moveTo(event.clientX, height)
 
-
-
     } 
   }
 
@@ -106,7 +104,25 @@ export default class WhiteBoard extends Component {
   render() {
     return (
         <div>
-          <button onClick={this.saveImage}>Save Picture</button>
+          <button className='save' onClick={this.saveImage}>Save Picture</button>
+    
+          <button id='bold' className={this.state.bold ? 'selected' : ''}
+          onClick={this.boldButtonHandle}>bold</button>
+          <button className={'black' === this.state.color ? 'selected' : ''} 
+                  name='black' onClick={this.colorHandle}>black</button>
+          <button className={'red' === this.state.color ? 'selected' : ''} 
+                  name='red' onClick={this.colorHandle}>red</button>
+          <button className={'blue' === this.state.color ? 'selected' : ''}
+                  name='blue' onClick={this.colorHandle}>blue</button>
+          <button className={'green' === this.state.color ? 'selected' : ''}
+                  name='green' onClick={this.colorHandle}>green</button>
+          <button className={'yellow' === this.state.color ? 'selected' : ''}
+                  name='yellow' onClick={this.colorHandle}>yellow</button>
+          <button className={'purple' === this.state.color ? 'selected' : ''}
+                  name='purple' onClick={this.colorHandle}>purple</button>
+          <button className={'white' === this.state.color ? 'selected' : ''}
+          onClick={this.eraseHandle}>eraser</button>
+
           <canvas id="canvas"
           onMouseDown={this.startPosition} 
           onMouseUp={this.finishPosition} 
@@ -114,14 +130,6 @@ export default class WhiteBoard extends Component {
 
           ref="canvas" 
           />
-          <button onClick={this.boldButtonHandle}>bold</button>
-          <button name='black' onClick={this.colorHandle}>black</button>
-          <button name='red' onClick={this.colorHandle}>red</button>
-          <button name='blue' onClick={this.colorHandle}>blue</button>
-          <button name='green' onClick={this.colorHandle}>green</button>
-          <button name='yellow' onClick={this.colorHandle}>yellow</button>
-          <button name='purple' onClick={this.colorHandle}>purple</button>
-          <button onClick={this.eraseHandle}>eraser</button>
 
         </div>
     )

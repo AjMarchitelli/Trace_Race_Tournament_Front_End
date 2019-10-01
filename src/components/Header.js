@@ -5,7 +5,7 @@ export default class Bracket extends Component {
   render() {
     return (
     <div>
-      <h1>White Board Trace Race tournament no tournament </h1>
+      <h1>Domain Modeler 5000</h1>
     </div>
     )}
 }
